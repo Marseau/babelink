@@ -1,0 +1,57 @@
+{
+  "name": "babelink",
+  "version": "1.0.0",
+  "description": "🌍 Babelink - Capture, Translate & Listen. A cross-platform app for screen text capture, translation, and text-to-speech.",
+  "private": true,
+  "workspaces": [
+    "desktop",
+    "mobile",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=desktop",
+    "dev:desktop": "npm run dev --workspace=desktop",
+    "dev:mobile": "npm run dev --workspace=mobile",
+    "build": "npm run build --workspace=desktop && npm run build --workspace=mobile",
+    "build:desktop": "npm run build --workspace=desktop",
+    "build:mobile": "npm run build --workspace=mobile",
+    "tauri:desktop": "npm run tauri dev --workspace=desktop",
+    "tauri:build": "npm run tauri build --workspace=desktop",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "clean": "npm run clean --workspaces && rm -rf node_modules",
+    "postinstall": "npm run postinstall --workspaces --if-present"
+  },
+  "keywords": [
+    "translation",
+    "ocr",
+    "text-to-speech",
+    "screen-capture",
+    "cross-platform",
+    "magic-ui",
+    "supabase",
+    "tauri",
+    "nextjs",
+    "react-native"
+  ],
+  "author": "Marseau <marseaufranco@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Marseau/babelink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Marseau/babelink/issues"
+  },
+  "homepage": "https://github.com/Marseau/babelink#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
